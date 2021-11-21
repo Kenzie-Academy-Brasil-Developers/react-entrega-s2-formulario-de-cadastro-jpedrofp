@@ -1,0 +1,17 @@
+
+.App-header {
+  background-image: url("./img/back3.webp");
+  background-size:120%;
+  filter: grayscale(0) hue-rotate(50deg);
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  animation-name:inicial;
+  animation-duration:2.5s;
+}
+
+@keyframes inicial {
+0% {  filter: grayscale(1) hue-rotate(50deg); }
+ 33%  {  filter: grayscale(1) hue-rotate(33deg);}
+ 100% {  filter: grayscale(0) hue-rotate(50deg)}
+}
