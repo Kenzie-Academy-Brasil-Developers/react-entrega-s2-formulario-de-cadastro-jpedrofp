@@ -8,6 +8,7 @@ const Profile = ({ user: {username, password} }) => {
   const id = useParams();
     useEffect(() => {
     api.get(`/users/${id}/  `).then((response) => setUserID(response.data));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

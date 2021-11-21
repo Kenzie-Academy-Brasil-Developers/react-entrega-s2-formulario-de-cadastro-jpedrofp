@@ -1,9 +1,7 @@
-import { Link, Switch, Route, useHistory } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import Profile from "../Profile"
 
 import * as yup from "yup";
 import api from "../../../services/api";
@@ -13,7 +11,7 @@ const Login = ({ setAuthentication , setUser }) => {
   const history = useHistory();
 
   const schema = yup.object().shape({
-    username: yup.string()  .required("Campo obrigatório"),
+    username: yup.string().required("Campo obrigatório"),
     password: yup.string().required("Campo obrigatório"),
   })
 
